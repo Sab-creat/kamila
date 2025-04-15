@@ -1,158 +1,204 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Қыз ұзату — Камила</title>
+  <title>Приглашение — Камила</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fef8f5;
-      color: #3e2c27;
-    }
-    header {
-      background: url('5420516454794653537.jpg') no-repeat center center/cover;
-      color: white;
+      font-family: 'Playfair Display', serif;
+      background-color: #f3f1ec;
+      color: #fff;
       text-align: center;
-      padding: 120px 20px;
+    }
+    .hero {
+      background: url('my-photo.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 1rem;
       position: relative;
     }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .hero-top {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .hero-bottom {
       background: rgba(0,0,0,0.4);
+      padding: 1rem;
+      border-radius: 20px;
     }
-    header h1, header h2, header p {
-      position: relative;
-      z-index: 2;
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin: 0.5rem 0;
     }
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
     }
-    header h2 {
-      font-size: 24px;
+    .countdown div {
+      background-color: rgba(0,0,0,0.4);
+      padding: 0.8rem;
+      border-radius: 10px;
+      min-width: 60px;
     }
-    section {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
+    .section {
+      background-color: #726d67;
+      padding: 2rem 1rem;
+    }
+    .section img {
+      width: 200px;
+      border-radius: 50%;
+      margin-top: 1.5rem;
+    }
+    .address {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+    .confirm-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .confirm-form input {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 400px;
+    }
+    .confirm-form button {
+      background-color: #1d1d1d;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .mini-map {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      margin-top: 1rem;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    h3 {
-      border-bottom: 2px solid #c99b84;
-      padding-bottom: 10px;
-    }
-    .timeline {
-      list-style: none;
-      padding: 0;
-    }
-    .timeline li {
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #777;
-    }
-    .dual-lang {
-      margin-bottom: 40px;
-    }
-    .lang {
-      margin-bottom: 30px;
-    }
-    .audio-hidden {
+
+    audio {
       display: none;
     }
-    .map {
-      text-align: center;
-    }
-    iframe.map-frame {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    .music-btn {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1000;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Қыз ұзату</h1>
-    <h2>Камила</h2>
-    <p>05 шілде 2025, 13:00</p>
-    <p>г. Караганда, ул. Таттимбета 18, ресторан "Toi Grand"</p>
-  </header>
-
-  <audio autoplay loop>
-    <source src="Zhazira-Lyazzat-Bairbekovalar-Kazak-aruyu-agugai.kz_.mp3" type="audio/mpeg">
-    Сіздің браузеріңіз аудионы қолдамайды.
-  </audio>
-
-  <section class="dual-lang">
-    <div class="lang">
-      <h3>Құрметті қонақтар!</h3>
-      <p>Сіздерді қызымыз Камиланың ұзату тойына арналған салтанатты шараға шақырамыз. Сізбен бірге бұл қуанышымызды бөлісу — біз үшін үлкен мәртебе.</p>
+  <section class="hero">
+    <div class="hero-top">
+      <p>ҰЗАТУҒА ШАҚЫРУ</p>
     </div>
-    <div class="lang">
-      <h3>Дорогие гости!</h3>
-      <p>Приглашаем вас на торжественную церемонию узату нашей дочери Камилы. Для нас будет честью разделить этот радостный день вместе с вами.</p>
+    <div class="hero-bottom">
+      <h1>Камила</h1>
+      <p>ОСЫ ҰМЫТЫЛМАС КҮНДІ СІЗДЕРМЕН БӨЛІСУГЕ ҚУАНЫШТЫМЫЗ</p>
+      <p>5 ШІЛДЕ 2025</p>
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><br>күн</div>
+        <div><span id="hours">00</span><br>сағат</div>
+        <div><span id="minutes">00</span><br>минут</div>
+        <div><span id="seconds">00</span><br>секунд</div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h3>Бағдарлама | Программа</h3>
-    <ul class="timeline">
-      <li>13:00 — Сбор гостей | Қонақтарды қарсы алу</li>
-      <li>14:00 — Торжественная церемония | Салтанатты рәсім</li>
-      <li>15:00 — Банкет и шоу-программа | Банкет және шоу-бағдарлама</li>
-      <li>18:00 — Танцы и веселье | Би және көңілді кеш</li>
-      <li>20:00 — Завершение вечера | Кештің аяқталуы</li>
-    </ul>
-  </section>
+  <section class="section">
+    <h2 style="font-family: 'Great Vibes', cursive; font-size: 2rem;">Құрметті туған-туыс, дос-жаран!</h2>
+    <p>Біздің өміріміздегі маңызды мерекелердің бірі — қызымызды ұзатуға ниетті болатынын хабарлауға қуаныштымыз.</p>
+    <p>Сіздерді осы ұмытылмас күннің қуанышымен бөлісуге шақырамыз.</p>
 
-  <section>
-    <h3>Мекенжай | Адрес</h3>
-    <p>Ресторан "Toi Grand"<br>ул. Таттимбета 18А, Караганда<br>GPS: 49.793758, 73.163161</p>
-    <div class="map">
-      <iframe class="map-frame" src="https://maps.google.com/maps?q=49.793758,73.163161&hl=kk&z=16&output=embed"></iframe>
+    <!-- Увеличенное фото -->
+    <img src="my-photo.jpg" alt="Невеста" />
+
+    <!-- Надпись под фото -->
+    <p style="font-family: 'Great Vibes', cursive; font-size: 1.8rem; margin-top: 1rem;">Аяулы қызымыз Камила</p>
+
+    <div class="address">
+      <p><strong>Наш адрес:</strong><br>Ресторан "Toi Grand",<br>ул. Таттимбета 18А, Караганда</p>
     </div>
-  </section>
 
-  <section>
-    <h3>Байланыс | Контакты</h3>
-    <p>Қосымша ақпарат үшін: <strong>+7 701 186 5869</strong></p>
-  </section>
+    <!-- Мини-карта по координатам -->
+    <iframe class="mini-map"
+      src="https://yandex.ru/map-widget/v1/?ll=73.163161%2C49.793758&z=17&pt=73.163161,49.793758,pm2rdl"
+      allowfullscreen>
+    </iframe>
 
-  <section>
-    <h3>Қонақтардың қатысуын растау | Подтверждение участия гостей</h3>
-    <form action="#" method="POST">
-      <label for="name">Аты-жөні | Фамилия, имя:</label>
-      <input type="text" id="name" name="name" required placeholder="Аты-жөніңізді жазыңыз" />
-
-      <label for="attendance">Қатысу:</label>
-      <select id="attendance" name="attendance" required>
-        <option value="yes">Қатысамын | Приду</option>
-        <option value="no">Қатыспаймын | Не приду</option>
-      </select>
-
-      <label for="guests">Қонақтар саны | Количество гостей:</label>
-      <input type="number" id="guests" name="guests" min="0" required placeholder="Қонақтар саны" />
-
-      <button type="submit">Растау | Подтвердить</button>
+    <p><strong>ПОДТВЕРЖДЕНИЕ</strong><br>Пожалуйста подтвердите своё присутствие до 05.06.2025</p>
+    <form class="confirm-form" action="https://docs.google.com/forms/d/e/ВАШ_ID_ФОРМЫ/formResponse" method="POST" target="_blank">
+      <input type="text" name="entry.1234567890" placeholder="Ваше имя" required />
+      <input type="number" name="entry.0987654321" placeholder="Количество гостей" required />
+      <button type="submit">Подтвердить</button>
     </form>
+
+    <p style="margin-top:2rem;">Опубликуйте фото дня нашей свадьбы в соцсетях с хэштегом<br><strong>#ЖенимБас!</strong></p>
   </section>
 
-  <footer>
-    Ізгі тілекпен, Камиланың отбасы ♥
-  </footer>
+  <!-- Удалена старая большая карта -->
+
+  <!-- Фоновая музыка -->
+  <audio id="bg-music" loop>
+    <source src="your-music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+  <button class="music-btn" onclick="toggleMusic()">Музыка</button>
+
+  <script>
+    const targetDate = new Date("2025-07-05T13:00:00").getTime();
+    const countdown = () => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('days').innerText = d;
+      document.getElementById('hours').innerText = h;
+      document.getElementById('minutes').innerText = m;
+      document.getElementById('seconds').innerText = s;
+    };
+    setInterval(countdown, 1000);
+
+    // Музыка
+    const music = document.getElementById("bg-music");
+    let playing = false;
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+      } else {
+        music.play();
+      }
+      playing = !playing;
+    }
+  </script>
 </body>
 </html>
