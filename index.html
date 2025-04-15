@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Қыз ұзату — Камила</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fef8f5;
+      color: #3e2c27;
+    }
+    header {
+      background: url('5420516454794653537.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1, header h2, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    header h2 {
+      font-size: 24px;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      border-bottom: 2px solid #c99b84;
+      padding-bottom: 10px;
+    }
+    .timeline {
+      list-style: none;
+      padding: 0;
+    }
+    .timeline li {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+    .dual-lang {
+      margin-bottom: 40px;
+    }
+    .lang {
+      margin-bottom: 30px;
+    }
+    .audio-hidden {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+    .map {
+      text-align: center;
+    }
+    iframe.map-frame {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Қыз ұзату</h1>
+    <h2>Камила</h2>
+    <p>05 шілде 2025, 13:00</p>
+    <p>г. Караганда, ул. Таттимбета 18, ресторан "Toi Grand"</p>
+  </header>
+
+  <div class="audio-hidden">
+    <iframe src="https://www.youtube.com/embed/prwqWXT4Q8E?autoplay=1&loop=1&playlist=prwqWXT4Q8E&controls=0&showinfo=0" frameborder="0" allow="autoplay"></iframe>
+  </div>
+
+  <section class="dual-lang">
+    <div class="lang">
+      <h3>Құрметті қонақтар!</h3>
+      <p>Сіздерді қызымыз Камиланың ұзату тойына арналған салтанатты шараға шақырамыз. Сізбен бірге бұл қуанышымызды бөлісу — біз үшін үлкен мәртебе.</p>
+    </div>
+    <div class="lang">
+      <h3>Дорогие гости!</h3>
+      <p>Приглашаем вас на торжественную церемонию узату нашей дочери Камилы. Для нас будет честью разделить этот радостный день вместе с вами.</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>Бағдарлама | Программа</h3>
+    <ul class="timeline">
+      <li>13:00 — Сбор гостей | Қонақтарды қарсы алу</li>
+      <li>14:00 — Торжественная церемония | Салтанатты рәсім</li>
+      <li>15:00 — Банкет и шоу-программа | Банкет және шоу-бағдарлама</li>
+      <li>18:00 — Танцы и веселье | Би және көңілді кеш</li>
+      <li>20:00 — Завершение вечера | Кештің аяқталуы</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Мекенжай | Адрес</h3>
+    <p>Ресторан "Toi Grand"<br>ул. Таттимбета 18А, Караганда<br>GPS: 49.793758, 73.163161</p>
+    <div class="map">
+      <iframe class="map-frame" src="https://maps.google.com/maps?q=49.793758,73.163161&hl=kk&z=16&output=embed"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h3>Байланыс | Контакты</h3>
+    <p>Қосымша ақпарат үшін: <strong>+7 701 186 5869</strong></p>
+  </section>
+
+  <section>
+    <h3>Қонақтардың қатысуын растау | Подтверждение участия гостей</h3>
+    <form action="#" method="POST">
+      <label for="name">Аты-жөні | Фамилия, имя:</label>
+      <input type="text" id="name" name="name" required placeholder="Аты-жөніңізді жазыңыз" />
+
+      <label for="attendance">Қатысу:</label>
+      <select id="attendance" name="attendance" required>
+        <option value="yes">Қатысамын | Приду</option>
+        <option value="no">Қатыспаймын | Не приду</option>
+      </select>
+
+      <label for="guests">Қонақтар саны | Количество гостей:</label>
+      <input type="number" id="guests" name="guests" min="0" required placeholder="Қонақтар саны" />
+
+      <button type="submit">Растау | Подтвердить</button>
+    </form>
+  </section>
+
+  <footer>
+    Ізгі тілекпен, Камиланың отбасы ♥
+  </footer>
+</body>
+</html>
